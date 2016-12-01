@@ -10,13 +10,13 @@ public enum Hardware {
 	public CANTalon frontLeft, frontRight, backLeft, backRight;
 	
 	Hardware() {
-		leftJoy = new Joystick(0);
-		rightJoy = new Joystick(0);
+		leftJoy = new Joystick(PortMap.PORT.leftJoy);
+		rightJoy = new Joystick(PortMap.PORT.rightJoy);
 				
-		frontLeft = new CANTalon(0);
-		frontRight = new CANTalon(1);
-		backLeft = new CANTalon(2);
-		backRight = new CANTalon(3);
+		frontLeft = new CANTalon(PortMap.PORT.frontLeftTalon);
+		frontRight = new CANTalon(PortMap.PORT.frontRightTalon);
+		backLeft = new CANTalon(PortMap.PORT.backLeftTalon);
+		backRight = new CANTalon(PortMap.PORT.backRightTalon);
 
 	}
 }

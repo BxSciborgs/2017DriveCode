@@ -7,16 +7,19 @@ public enum Hardware {
 	INSTANCE;
 	
 	public Joystick leftJoy, rightJoy;
-	public CANTalon frontLeft, frontRight, backLeft, backRight;
+	public CANTalon frontLeftDM, frontRightDM, backLeftDM, backRightDM, frontLeftSM, frontRightSM, backLeftSM, backRightSM;
 	
 	Hardware() {
 		leftJoy = new Joystick(PortMap.PORT.leftJoy);
 		rightJoy = new Joystick(PortMap.PORT.rightJoy);
 				
-		frontLeft = new CANTalon(PortMap.PORT.frontLeftTalon);
-		frontRight = new CANTalon(PortMap.PORT.frontRightTalon);
-		backLeft = new CANTalon(PortMap.PORT.backLeftTalon);
-		backRight = new CANTalon(PortMap.PORT.backRightTalon);
-
+		frontLeftDM = new CANTalon(PortMap.PORT.frontLeftTalonDM);
+		frontRightDM = new CANTalon(PortMap.PORT.frontRightTalonDM);
+		backLeftDM = new CANTalon(PortMap.PORT.backLeftTalonDM);
+		backRightDM = new CANTalon(PortMap.PORT.backRightTalonDM);
+		frontLeftSM = new CANTalon(PortMap.PORT.frontLeftTalonSM);
+		frontRightSM = new CANTalon(PortMap.PORT.frontRightTalonSM);
+		backLeftSM = new CANTalon(PortMap.PORT.backLeftTalonSM);
+		backRightSM = new CANTalon(PortMap.PORT.backRightTalonSM);
 	}
 }

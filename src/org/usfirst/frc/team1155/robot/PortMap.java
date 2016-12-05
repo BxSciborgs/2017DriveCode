@@ -24,6 +24,6 @@ public enum PortMap {
 	public int leftJoy = 0;
 	public int rightJoy = 1;
 	
-	public int frontLeftTalon = 0, frontRightTalon = 1, backLeftTalon = 2, backRightTalon = 3;
+	public int frontLeftTalonDM = 0, frontRightTalonDM = 1, backLeftTalonDM = 2, backRightTalonDM = 3, frontLeftTalonSM = 4, frontRightTalonSM = 5, backLeftTalonSM = 6, backRightTalonSM = 7;
 
 }

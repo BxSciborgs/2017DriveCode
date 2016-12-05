@@ -7,8 +7,8 @@ public enum Hardware {
 	INSTANCE;
 	public CANTalon frontLeftT, frontRightT, backLeftT, backRightT;
 	public Joystick rightJ, leftJ, gamePad;
-	Hardware()
-	{
+
+	Hardware() {
 		frontLeftT = new CANTalon(1);
 		frontRightT = new CANTalon(2);
 		backLeftT = new CANTalon(3);

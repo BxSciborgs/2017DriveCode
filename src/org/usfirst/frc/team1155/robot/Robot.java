@@ -1,12 +1,14 @@
 
 package org.usfirst.frc.team1155.robot;
 
+import org.usfirst.frc.team1155.robot.commands.ExampleCommand;
+import org.usfirst.frc.team1155.robot.subsystems.ExampleSubsystem;
+import org.usfirst.frc.team1155.robot.subsystems.OmniDrive;
+
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
-import org.usfirst.frc.team1155.robot.commands.ExampleCommand;
-import org.usfirst.frc.team1155.robot.subsystems.ExampleSubsystem;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
@@ -21,7 +23,7 @@ public class Robot extends IterativeRobot {
 
 	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
 	public static OI oi;
-
+	public static OmniDrive drive;
 	Command autonomousCommand;
 	SendableChooser chooser;
 
@@ -29,7 +31,9 @@ public class Robot extends IterativeRobot {
 	 * This function is run when the robot is first started up and should be
 	 * used for any initialization code.
 	 */
+	@Override
 	public void robotInit() {
+		drive = new OmniDrive();
 		oi = new OI();
 		chooser = new SendableChooser();
 		chooser.addDefault("Default Auto", new ExampleCommand());
@@ -42,10 +46,12 @@ public class Robot extends IterativeRobot {
 	 * You can use it to reset any subsystem information you want to clear when
 	 * the robot is disabled.
 	 */
+	@Override
 	public void disabledInit() {
 
 	}
 
+	@Override
 	public void disabledPeriodic() {
 		Scheduler.getInstance().run();
 	}
@@ -61,6 +67,7 @@ public class Robot extends IterativeRobot {
 	 * chooser code above (like the commented example) or additional comparisons
 	 * to the switch structure below with additional strings & commands.
 	 */
+	@Override
 	public void autonomousInit() {
 		autonomousCommand = (Command) chooser.getSelected();
 
@@ -79,10 +86,12 @@ public class Robot extends IterativeRobot {
 	/**
 	 * This function is called periodically during autonomous
 	 */
+	@Override
 	public void autonomousPeriodic() {
 		Scheduler.getInstance().run();
 	}
 
+	@Override
 	public void teleopInit() {
 		// This makes sure that the autonomous stops running when
 		// teleop starts running. If you want the autonomous to
@@ -95,6 +104,7 @@ public class Robot extends IterativeRobot {
 	/**
 	 * This function is called periodically during operator control
 	 */
+	@Override
 	public void teleopPeriodic() {
 		Scheduler.getInstance().run();
 	}
@@ -102,6 +112,7 @@ public class Robot extends IterativeRobot {
 	/**
 	 * This function is called periodically during test mode
 	 */
+	@Override
 	public void testPeriodic() {
 		LiveWindow.run();
 	}

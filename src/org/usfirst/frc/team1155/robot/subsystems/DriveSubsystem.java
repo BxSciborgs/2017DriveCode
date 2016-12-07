@@ -33,16 +33,21 @@ public class DriveSubsystem extends Subsystem {
 	}
 
 	public void crab() {
+		
 		frontRightDM.changeControlMode(TalonControlMode.Follower);
 		frontRightDM.set(frontLeftDM.getDeviceID());
-		for(int i = 1; i < DMArray.length; i++){
-			DMArray[i].changeControlMode(TalonControlMode.Follower);
-			DMArray[i].set(frontLeftDM.getDeviceID());
-		}
-		for(int i = 1; i < SMArray.length; i++){
-			SMArray[i].changeControlMode(TalonControlMode.Follower);
-			SMArray[i].set(frontLeftSM.getDeviceID());
-		}
+		backLeftDM.changeControlMode(TalonControlMode.Follower);
+		backLeftDM.set(frontLeftDM.getDeviceID());
+		backRightDM.changeControlMode(TalonControlMode.Follower);
+		backRightDM.set(frontLeftDM.getDeviceID());
+		
+		frontRightSM.changeControlMode(TalonControlMode.Follower);
+		frontRightSM.set(frontLeftSM.getDeviceID());
+		backLeftSM.changeControlMode(TalonControlMode.Follower);
+		backLeftSM.set(frontLeftSM.getDeviceID());
+		backRightSM.changeControlMode(TalonControlMode.Follower);
+		backRightSM.set(frontLeftSM.getDeviceID());
+		
 	}
 
 	@Override

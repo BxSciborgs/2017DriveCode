@@ -4,6 +4,7 @@ package org.usfirst.frc.team1155.robot;
 import org.usfirst.frc.team1155.robot.commands.ExampleCommand;
 import org.usfirst.frc.team1155.robot.subsystems.ExampleSubsystem;
 import org.usfirst.frc.team1155.robot.subsystems.MecanumDriveSubsystem;
+import org.usfirst.frc.team1155.robot.subsystems.PIDLiftSubsystem;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
@@ -23,6 +24,7 @@ public class Robot extends IterativeRobot {
 
 	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
 	public static final MecanumDriveSubsystem mecanum = new MecanumDriveSubsystem();
+	public static final PIDLiftSubsystem pidLift = new PIDLiftSubsystem();
 	public static OI oi;
 
     Command autonomousCommand;

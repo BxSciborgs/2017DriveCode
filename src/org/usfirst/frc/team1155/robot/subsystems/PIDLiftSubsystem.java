@@ -10,10 +10,11 @@ public class PIDLiftSubsystem extends PIDSubsystem {
 	private static final double P_VALUE = 0;
 	private static final double I_VALUE = 0;
 	private static final double D_VALUE = 0;
+	private static final double ABSOLUTE_TOLERANCE = 0; 
 
 	public PIDLiftSubsystem() {
 		super("PIDLiftSubsystem",  P_VALUE, I_VALUE, D_VALUE);
-		setAbsoluteTolerance(0.05);
+		setAbsoluteTolerance(ABSOLUTE_TOLERANCE);
 		getPIDController().setContinuous(false);
 	}
 	

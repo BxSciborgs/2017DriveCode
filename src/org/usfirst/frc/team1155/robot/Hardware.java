@@ -10,45 +10,45 @@ public enum Hardware {
 	INSTANCE;
 
 
-	CANTalon FLdrive, FLsteer, RLdrive, RLsteer, FRdrive, FRsteer, RRdrive, RRsteer;
+	CANTalon driveFrontL, steerFrontL, driveBackL, steerBackL, driveFrontR, steerFrontR, driveBackR, steerBackR;
 	Joystick rightJoy, leftJoy;
 	AnalogGyro gyro;
 
 	Hardware() {
-		FLdrive = new CANTalon(1); // Initialize the SRX on device 1.
-		FLsteer = new CANTalon(2); 
-		RLdrive = new CANTalon(3); 
-		RLsteer = new CANTalon(4);
-		FRdrive = new CANTalon(5);
-		FRsteer = new CANTalon(6);
-		RRdrive = new CANTalon(7);
-		RRsteer = new CANTalon(8);
+		driveFrontL = new CANTalon(1); // Initialize the SRX on device 1.
+		steerFrontL = new CANTalon(2); 
+		driveBackL = new CANTalon(3); 
+		steerBackL = new CANTalon(4);
+		driveFrontR = new CANTalon(5);
+		steerFrontR = new CANTalon(6);
+		driveBackR = new CANTalon(7);
+		steerBackR = new CANTalon(8);
 		rightJoy = new Joystick(1);
 		leftJoy = new Joystick(2);
 		gyro = new AnalogGyro(0);// gyro on RoboRio analog input port 0
 
-		FLdrive.changeControlMode(TalonControlMode.PercentVbus);
-		RLdrive.changeControlMode(TalonControlMode.PercentVbus);
-		FRdrive.changeControlMode(TalonControlMode.PercentVbus);
-		RRdrive.changeControlMode(TalonControlMode.PercentVbus);
-		FLsteer.changeControlMode(TalonControlMode.PercentVbus);
-		RLsteer.changeControlMode(TalonControlMode.PercentVbus);
-		FRsteer.changeControlMode(TalonControlMode.PercentVbus);
-		RRsteer.changeControlMode(TalonControlMode.PercentVbus);
+		driveFrontL.changeControlMode(TalonControlMode.PercentVbus);
+		driveBackL.changeControlMode(TalonControlMode.PercentVbus);
+		driveFrontR.changeControlMode(TalonControlMode.PercentVbus);
+		driveBackR.changeControlMode(TalonControlMode.PercentVbus);
+		steerFrontL.changeControlMode(TalonControlMode.PercentVbus);
+		steerBackL.changeControlMode(TalonControlMode.PercentVbus);
+		steerFrontR.changeControlMode(TalonControlMode.PercentVbus);
+		steerBackR.changeControlMode(TalonControlMode.PercentVbus);
 
-		FLsteer.setFeedbackDevice(FeedbackDevice.AnalogPot);
-		RLsteer.setFeedbackDevice(FeedbackDevice.AnalogPot);
-		FRsteer.setFeedbackDevice(FeedbackDevice.AnalogPot);
-		RRsteer.setFeedbackDevice(FeedbackDevice.AnalogPot);
-		FLdrive.setFeedbackDevice(FeedbackDevice.QuadEncoder);
-		RLdrive.setFeedbackDevice(FeedbackDevice.QuadEncoder);
-		FRdrive.setFeedbackDevice(FeedbackDevice.QuadEncoder);
-		RRdrive.setFeedbackDevice(FeedbackDevice.QuadEncoder);
+		steerFrontL.setFeedbackDevice(FeedbackDevice.AnalogPot);
+		steerBackL.setFeedbackDevice(FeedbackDevice.AnalogPot);
+		steerFrontR.setFeedbackDevice(FeedbackDevice.AnalogPot);
+		steerBackR.setFeedbackDevice(FeedbackDevice.AnalogPot);
+		driveFrontL.setFeedbackDevice(FeedbackDevice.QuadEncoder);
+		driveBackL.setFeedbackDevice(FeedbackDevice.QuadEncoder);
+		driveFrontR.setFeedbackDevice(FeedbackDevice.QuadEncoder);
+		driveBackR.setFeedbackDevice(FeedbackDevice.QuadEncoder);
 
 
-		FLsteer.setPID(1, 0, 0);
-		RLsteer.setPID(1, 0, 0);
-		FRsteer.setPID(1, 0, 0);
-		RRsteer.setPID(1, 0, 0);
+		steerFrontL.setPID(1, 0, 0);
+		steerBackL.setPID(1, 0, 0);
+		steerFrontR.setPID(1, 0, 0);
+		steerBackR.setPID(1, 0, 0);
 	}
 }

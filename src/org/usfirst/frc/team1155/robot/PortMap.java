@@ -8,7 +8,7 @@ import edu.wpi.first.wpilibj.CANTalon;
  * the wiring easier and significantly reduces the number of magic static final numbers
  * floating around.
  */
-public static final enum PortMap {
+public enum PortMap {
 	// For example to map the left and right motors, you could define the
 	// following variables to use with your drivetrain subsystem.
 	// public static final static static final int leftMotor = 1;

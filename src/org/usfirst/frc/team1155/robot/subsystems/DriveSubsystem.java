@@ -13,10 +13,9 @@ public class DriveSubsystem extends Subsystem {
 	// private CANTalon frontLeft, frontRight, backLeft, backRight;
 	private CANTalon frontLeftDM, frontRightDM, backLeftDM, backRightDM, frontLeftSM, frontRightSM, backLeftSM,
 			backRightSM;
-	private CANTalon[] DMArray = {frontLeftDM, frontRightDM, backLeftDM, backRightDM};
-	private CANTalon[] SMArray = {frontLeftSM, frontRightSM, backLeftSM, backRightSM};
 
 	public DriveSubsystem() {
+
 		leftJoy = Hardware.INSTANCE.leftJoy;
 		rightJoy = Hardware.INSTANCE.rightJoy;
 		
@@ -41,6 +40,8 @@ public class DriveSubsystem extends Subsystem {
 		backRightDM.changeControlMode(TalonControlMode.Follower);
 		backRightDM.set(frontLeftDM.getDeviceID());
 		
+		
+		
 		frontRightSM.changeControlMode(TalonControlMode.Follower);
 		frontRightSM.set(frontLeftSM.getDeviceID());
 		backLeftSM.changeControlMode(TalonControlMode.Follower);
@@ -50,6 +51,24 @@ public class DriveSubsystem extends Subsystem {
 		
 	}
 
+	public void rotate() {
+		frontRightDM.changeControlMode(TalonControlMode.PercentVbus);
+		frontRightDM.set(frontLeftDM.getDeviceID());
+		backLeftDM.changeControlMode(TalonControlMode.PercentVbus);
+		backLeftDM.set(frontLeftDM.getDeviceID());
+		backRightDM.changeControlMode(TalonControlMode.PercentVbus);
+		backRightDM.set(frontLeftDM.getDeviceID());
+		
+		frontRightSM.changeControlMode(TalonControlMode.PercentVbus);
+		frontRightSM.set(frontLeftSM.getDeviceID());
+		backLeftSM.changeControlMode(TalonControlMode.PercentVbus);
+		backLeftSM.set(frontLeftSM.getDeviceID());
+		backRightSM.changeControlMode(TalonControlMode.PercentVbus);
+		backRightSM.set(frontLeftSM.getDeviceID());
+		
+		
+	}
+	
 	@Override
 	protected void initDefaultCommand() {
 		// TODO Auto-generated method stub

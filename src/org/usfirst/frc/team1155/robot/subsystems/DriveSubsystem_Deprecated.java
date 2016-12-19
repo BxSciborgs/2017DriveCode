@@ -7,14 +7,14 @@ import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.CANTalon.TalonControlMode;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
-public class DriveSubsystem extends Subsystem {
+public class DriveSubsystem_Deprecated extends Subsystem {
 
 	private Joystick leftJoy, rightJoy;
 	// private CANTalon frontLeft, frontRight, backLeft, backRight;
 	private CANTalon frontLeftDM, frontRightDM, backLeftDM, backRightDM, frontLeftSM, frontRightSM, backLeftSM,
 			backRightSM;
 
-	public DriveSubsystem() {
+	public DriveSubsystem_Deprecated() {
 
 		leftJoy = Hardware.INSTANCE.leftJoy;
 		rightJoy = Hardware.INSTANCE.rightJoy;

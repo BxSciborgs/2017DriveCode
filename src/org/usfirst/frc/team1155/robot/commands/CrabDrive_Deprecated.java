@@ -7,9 +7,11 @@ import edu.wpi.first.wpilibj.command.Command;
 /**
  *
  */
-public class CrabDrive extends Command {
+public class CrabDrive_Deprecated extends Command {
+	
+	private frontLeftDM
 
-    public CrabDrive() {
+    public CrabDrive_Deprecated() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
     	requires(Robot.drive);
@@ -18,6 +20,7 @@ public class CrabDrive extends Command {
     // Called just before this Command runs the first time
     protected void initialize() {
     	Robot.drive.crab();
+
     }
 
     // Called repeatedly when this Command is scheduled to run

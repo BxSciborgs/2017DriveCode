@@ -2,7 +2,7 @@
 package org.usfirst.frc.team1155.robot;
 
 import org.usfirst.frc.team1155.robot.commands.ExampleCommand;
-import org.usfirst.frc.team1155.robot.subsystems.DriveSubsystem;
+import org.usfirst.frc.team1155.robot.subsystems.DriveSubsystem_Deprecated;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
@@ -22,7 +22,7 @@ public class Robot extends IterativeRobot {
 
 	//public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
 	
-	public static final DriveSubsystem drive = new DriveSubsystem();
+	public static final DriveSubsystem_Deprecated drive = new DriveSubsystem_Deprecated();
 	public static OI oi;
 
     Command autonomousCommand;

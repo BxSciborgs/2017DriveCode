@@ -1,6 +1,9 @@
 package org.usfirst.frc.team1155.robot;
 
+import org.usfirst.frc.team1155.robot.subsystems.DriveSubsystem;
+
 import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.command.Command;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -29,12 +32,16 @@ public class OI extends Command{
     // Run the command while the button is being held down and interrupt it once
     // the button is released.
     // button.whileHelO
-	private Joystick leftJoy;
-	private Joystick rightJoy;
+	
+	private static DriveSubsystem drive;
+	public Joystick leftJoy;
+	public Joystick rightJoy;
 	
 	public OI(){
 		leftJoy = Hardware.INSTANCE.leftJoy;
 		rightJoy = Hardware.INSTANCE.rightJoy;
+		drive = new DriveSubsystem();
+		
 	}
 }
 

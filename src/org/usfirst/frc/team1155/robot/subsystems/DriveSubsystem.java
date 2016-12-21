@@ -15,18 +15,18 @@ public class DriveSubsystem extends Subsystem{
 		
 	}
 	
-	public void setSpeed(double fr, double fl, double rr, double rl){
+	public void setSpeed(double fr, double fl, double br, double bl){
     	FRdrive.set(fr);
     	FLdrive.set(fl);
-    	RRdrive.set(rr);
-    	RLdrive.set(rl);
+    	RRdrive.set(br);
+    	RLdrive.set(bl);
 	}
 	
-	public void setAngle(double fr, double fl, double rl, double rr){
-		FRsteer.set((fr+180) * (1023/360)); //move the math to command
-    	FLsteer.set((fl+180) * (1023/360));
-    	RLsteer.set((rl+180) * (1023/360));
-    	RRsteer.set((rr+180) * (1023/360));
+	public void setAngle(double fr, double fl, double bl, double br){
+		FRsteer.set(fr); //move the math to command
+    	FLsteer.set(fl);
+    	RLsteer.set(bl);
+    	RRsteer.set(br);
 	}
 
 	@Override

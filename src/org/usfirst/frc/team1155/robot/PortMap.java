@@ -21,17 +21,17 @@ public enum PortMap {
 
 	PORT;
 
-	public static final int leftJoy = 0;
-	public static final int rightJoy = 1;
+	public static final int LEFT_JOY = 0;
+	public static final int RIGHT_JOY = 1;
 
-	public static final int FLdrive = 1;
-	public static final int FLsteer = 2;
-	public static final int RLdrive = 3;
-	public static final int RLsteer = 4;
-	public static final int RRdrive = 5;
-	public static final int RRsteer = 6;
-	public static final int FRdrive = 7;
-	public static final int FRsteer = 8;
+	public static final int FL_DRIVE = 1;
+	public static final int FL_STEER = 2;
+	public static final int BL_DRIVE = 3;
+	public static final int BL_STEER = 4;
+	public static final int BR_DRIVE = 5;
+	public static final int BR_STEER = 6;
+	public static final int FR_DRIVE = 7;
+	public static final int FR_STEER = 8;
 	
-	public static final int gyro = 0;
+	public static final int GYRO = 0;
 }

@@ -1,7 +1,6 @@
 package org.usfirst.frc.team1155.robot.commands;
 
 import org.usfirst.frc.team1155.robot.Hardware;
-import org.usfirst.frc.team1155.robot.PortMap;
 import org.usfirst.frc.team1155.robot.Robot;
 
 import edu.wpi.first.wpilibj.AnalogGyro;
@@ -106,10 +105,10 @@ public class SwerveDriveCommand extends Command{
      	
      	Robot.drive.setSpeed(frontRSpeed, frontLSpeed, backRSpeed, backLSpeed);
   				  		
-  	}		  	}
+  	}		  	
   		  
 		
-	}
+	
 
 	@Override
 	protected boolean isFinished() {

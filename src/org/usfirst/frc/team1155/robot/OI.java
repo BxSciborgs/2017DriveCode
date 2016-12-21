@@ -1,7 +1,5 @@
 package org.usfirst.frc.team1155.robot;
 
-import org.usfirst.frc.team1155.robot.subsystems.DriveSubsystem;
-
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.command.Command;
 
@@ -33,14 +31,12 @@ public class OI extends Command{
     // the button is released.
     // button.whileHelO
 	
-	private static DriveSubsystem drive;
 	public Joystick leftJoy;
 	public Joystick rightJoy;
 	
 	public OI(){
 		leftJoy = Hardware.INSTANCE.leftJoy;
 		rightJoy = Hardware.INSTANCE.rightJoy;
-		drive = new DriveSubsystem();
 		
 	}
 

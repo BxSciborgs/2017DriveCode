@@ -22,17 +22,17 @@ public enum Hardware {
 	public AnalogGyro gyro;
 
 	Hardware() {
-		driveFrontL = new CANTalon(1); // Initialize the SRX on device 1.
-		steerFrontL = new CANTalon(2); 
-		driveBackL = new CANTalon(3); 
-		steerBackL = new CANTalon(4);
-		driveFrontR = new CANTalon(5);
-		steerFrontR = new CANTalon(6);
-		driveBackR = new CANTalon(7);
-		steerBackR = new CANTalon(8);
-		rightJoy = new Joystick(1);
-		leftJoy = new Joystick(2);
-		gyro = new AnalogGyro(0);// gyro on RoboRio analog input port 0
+		driveFrontL = new CANTalon(PortMap.FL_DRIVE); // Initialize the SRX on device 1.
+		steerFrontL = new CANTalon(PortMap.FL_STEER); 
+		driveBackL = new CANTalon(PortMap.BL_DRIVE); 
+		steerBackL = new CANTalon(PortMap.BL_STEER);
+		driveFrontR = new CANTalon(PortMap.FR_DRIVE);
+		steerFrontR = new CANTalon(PortMap.FR_STEER);
+		driveBackR = new CANTalon(PortMap.BR_DRIVE);
+		steerBackR = new CANTalon(PortMap.BR_STEER);
+		rightJoy = new Joystick(PortMap.RIGHT_JOY);
+		leftJoy = new Joystick(PortMap.LEFT_JOY);
+		gyro = new AnalogGyro(PortMap.GYRO);// gyro on RoboRio analog input port 0
 
 		driveFrontL.changeControlMode(TalonControlMode.PercentVbus);
 		driveBackL.changeControlMode(TalonControlMode.PercentVbus);

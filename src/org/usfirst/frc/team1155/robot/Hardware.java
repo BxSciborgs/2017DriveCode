@@ -10,9 +10,16 @@ public enum Hardware {
 	INSTANCE;
 
 
-	CANTalon driveFrontL, steerFrontL, driveBackL, steerBackL, driveFrontR, steerFrontR, driveBackR, steerBackR;
-	Joystick rightJoy, leftJoy;
-	AnalogGyro gyro;
+	public CANTalon driveFrontL;
+	public CANTalon steerFrontL;
+	public CANTalon driveBackL;
+	public CANTalon steerBackL;
+	public CANTalon driveFrontR;
+	public CANTalon steerFrontR;
+	public CANTalon driveBackR;
+	public CANTalon steerBackR;
+	public Joystick rightJoy, leftJoy;
+	public AnalogGyro gyro;
 
 	Hardware() {
 		driveFrontL = new CANTalon(1); // Initialize the SRX on device 1.

@@ -13,6 +13,23 @@ public class SwerveDriveCommand extends Command{
 	Joystick rightJoy, leftJoy;
 	AnalogGyro gyro;
 
+	double forwardRaw;
+	double strafeRaw;
+	double rotateClockwiseRaw;
+	double temp;
+	double forwardFieldCentric;
+	double strafeFieldCentric;
+	double wheelbase;
+	double trackwidth;
+	double diagonal;
+	double a;
+	double b;
+	double c;
+	double d;
+	double frontRSpeed, frontLSpeed, backLSpeed, backRSpeed; //Front Right, Front Left, Rear Left, Rear Right Wheel Speeds, respectively
+	double frontRAngle, frontLAngle, backLAngle, backRAngle; //Wheel Angles
+	double max;
+	
 	@Override
 	protected void initialize() {
 		// TODO Auto-generated method stub

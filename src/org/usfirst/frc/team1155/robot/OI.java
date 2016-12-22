@@ -1,5 +1,7 @@
 package org.usfirst.frc.team1155.robot;
 
+import org.usfirst.frc.team1155.robot.commands.SwerveDriveCommand;
+
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.command.Command;
 
@@ -31,19 +33,20 @@ public class OI extends Command{
     // the button is released.
     // button.whileHelO
 	
-	public Joystick leftJoy;
-	public Joystick rightJoy;
+	public Joystick leftJoy, rightJoy;
+	
+	private Command startSwerve;
 	
 	public OI(){
-		leftJoy = Hardware.INSTANCE.leftJoy;
-		rightJoy = Hardware.INSTANCE.rightJoy;
+		leftJoy = new Joystick(PortMap.LEFT_JOY);
+		rightJoy = new Joystick(PortMap.RIGHT_JOY);
 		
+		startSwerve = new SwerveDriveCommand(leftJoy, rightJoy);
 	}
 
 	@Override
 	protected void initialize() {
-		// TODO Auto-generated method stub
-		
+		startSwerve.start();
 	}
 
 	@Override

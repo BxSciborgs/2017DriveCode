@@ -6,7 +6,7 @@ package org.usfirst.frc.team1155.robot;
  * the wiring easier and significantly reduces the number of magic static final numbers
  * floating around.
  */
-public enum PortMap {
+public class PortMap {
 	// For example to map the left and right motors, you could define the
 	// following variables to use with your drivetrain subsystem.
 	// public static final static static final int leftMotor = 1;
@@ -17,19 +17,22 @@ public enum PortMap {
 	// public static final static static final int rangefinderPort = 1;
 	// public static final static static final int rangefinderModule = 1;
 
-	PORT;
-
 	public static final int LEFT_JOY = 0;
 	public static final int RIGHT_JOY = 1;
 
-	public static final int FL_DRIVE = 1;
-	public static final int FL_STEER = 2;
-	public static final int BL_DRIVE = 3;
-	public static final int BL_STEER = 4;
-	public static final int BR_DRIVE = 5;
-	public static final int BR_STEER = 6;
-	public static final int FR_DRIVE = 7;
-	public static final int FR_STEER = 8;
+	public static final int FrontR_DRIVE = 2;
+	public static final int FrontR_STEER = 3;
+	
+	public static final int FrontL_DRIVE = 4;
+	public static final int FrontL_STEER = 5;
+	
+	public static final int BackL_DRIVE = 6;
+	public static final int BackL_STEER = 7;
+	
+	public static final int BackR_DRIVE = 8;
+	public static final int BackR_STEER = 9;
+	
+
 	
 	public static final int GYRO = 0;
 }

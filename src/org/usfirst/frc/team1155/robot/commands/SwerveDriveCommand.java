@@ -84,16 +84,16 @@ public class SwerveDriveCommand extends Command{
      	
      	//Normalize wheel speeds as stated in Ether's document
      	max = frontRSpeed;
-     	if(frontLSpeed > max){
+     	if(frontLSpeed > max)
      		max = frontLSpeed;
-     	}
-     	if(backLSpeed > max){
+     
+     	if(backLSpeed > max)
      		max = backLSpeed;
-     	}
-     	if(backRSpeed > max){
+     	
+     	if(backRSpeed > max)
      		max = backRSpeed;
-     	}
-     	if(max > 1){
+     	
+     	if(max > 1) {
      		frontRSpeed /= max;
      		frontLSpeed /= max;
      		backRSpeed /= max;

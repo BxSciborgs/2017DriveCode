@@ -32,7 +32,5 @@ public class PortMap {
 	public static final int BackR_DRIVE = 8;
 	public static final int BackR_STEER = 9;
 	
-
-	
 	public static final int GYRO = 0;
 }
